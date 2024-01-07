@@ -1,0 +1,145 @@
+.footer {
+    padding: 100px 0 80px;
+    background-color: $color-dark;
+    color: $color-white;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__title {
+    margin-bottom: 27px;
+}
+
+.footer__form {
+    max-width: 500px;
+}
+
+.footer__form-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 57px;
+    color: $color-white;
+    &::placeholder {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        opacity: 0.2;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.footer__form-btn {
+    background-color: $color-white;
+    padding: 10px 66px;
+    border: none;
+    margin-bottom: 110px;
+    font-family: 'Comfortaa', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    &:hover {
+        background-color: $color-green;
+    }
+}
+
+.footer__social-title {
+    margin-bottom: 28px;
+    font-weight: 700;
+}
+
+.footer__gallery {
+    display: grid;
+    gap: 52px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
+}
+
+.footer__menu-list {
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    align-self: flex-start;
+    & path {
+        transition: fill .3s ease;
+    }
+
+    &:hover path {
+        fill: $color-blue;
+    }
+}
+
+@media(max-width: 1230px) {
+    .footer__gallery-item {
+        width: 100%;
+        align-self: stretch;
+    }
+}
+
+@media(max-width: 991px) {
+    .footer__top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__logo {
+        order: -1;
+        margin-bottom: 35px;
+        align-self: center;
+    }
+
+    .footer__gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .footer__menu-list {
+        display: block;
+        text-align: center;
+    }
+
+    .footer__menu-item {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media(max-width: 460px) {
+    .footer {
+        padding: 50px 0 50px;
+    }
+
+    .footer__title {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .footer__logo {
+        margin-bottom: 15px;
+        & svg {
+            width: 80%;
+        }
+    }
+
+    .footer__form-btn {
+        margin-bottom: 50px;
+    }
+}
